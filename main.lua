@@ -1,5 +1,6 @@
 require('src/dependencies')
 
+_G.debugging = true
 
 
 function love.load()

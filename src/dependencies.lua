@@ -37,4 +37,9 @@ Gamestate = require('lib/hump/gamestate')
 
 -- Game states --
 require('src/states/Menu')
+require('src/states/Game')
+
+-- Classes --
+require('src/Player')
+require('src/Asteroid')
 

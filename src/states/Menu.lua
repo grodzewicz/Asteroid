@@ -11,10 +11,11 @@
 
 menu = {} -- previously: Gamestate.new()
 
+
 function menu:init()
 end
 
-function menu:enter(previous)
+function menu:enter(previous, world)
     self.from = previous
 end
 -- function menu:resume()
@@ -30,6 +31,8 @@ end
 -- function menu:directorydropped
 
 function menu:draw()
+    love.graphics.print("The current game state is: " .. tostring(Gamestate.current()))
+    love.graphics.print("Press 'Enter' to start new game", 100, 100)
 end
 -- function menu:visible
 -- function menu:focus
@@ -39,6 +42,9 @@ end
 function menu:keypressed(key)
 end
 function menu:keyreleased(key)
+    if key == "return" then
+        Gamestate.switch(game)
+    end
 end
 -- function menu:textinput
 -- function menu:textedited
